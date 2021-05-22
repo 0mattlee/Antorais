@@ -1,0 +1,20 @@
+def antorais(letra):
+tabela_c=[["a","b","c","d","e","f"],
+["g","h","i","j","k","l"],
+["m","n","o","p","q","r"],
+["s","t","u","v","w","x"],
+["y","z","0","1","2","3"],
+["4","5","6","7","8","9"]]
+for i in range(len(tabela_c)):
+for j in range(len(tabela_c)):
+if letra == tabela_c[i][j]:
+return i+1,j+1
+elif letra==" ":
+return " "
+
+msg = input("MSG:")
+print(msg.lower())
+for i in msg:
+numero=antorais(i.lower())
+for j in numero:
+print(j,end="")
